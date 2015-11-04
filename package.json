@@ -39,6 +39,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
+    "lodash": "^3.10.1"
   },
   "directories": {
     "test": "test"
