@@ -54,7 +54,7 @@ let facebookVirtualLocales = {
 	]
 }
 
-// Inverse facebookVirtualLocales (map real locales to Facebook virtual locales)
+// Invert facebookVirtualLocales (map real locales to Facebook virtual locales)
 let localesToNonStandardFacebookLocales = _(facebookVirtualLocales)
 	.map((locales, facebookNonStandardLocale) => {
 		return _.map(locales, (locale) => { return [locale, facebookNonStandardLocale]})
