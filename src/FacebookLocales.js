@@ -77,7 +77,7 @@ export function bestFacebookLocaleFor(locale) {
 	
 	// Unsupported locale, make an effort and return some supported locale with same langauge
 	let language = locale.substring(0, 2)
-	let supportedLocaleInLanguage = _.find(_.toArray(Facebook.supportedLocales), (supportedLocale) => { return _.startsWith(supportedLocale, language) }) 
+	let supportedLocaleInLanguage = _.find(Facebook.supportedLocales, (supportedLocale) => { return _.startsWith(supportedLocale, language) }) 
 	if (supportedLocaleInLanguage) {
 		return supportedLocaleInLanguage
 	}
