@@ -1,6 +1,6 @@
 {
   "name": "facebook-locales",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Maps locales to Facebook locales",
   "main": "dist/index.js",
   "scripts": {
