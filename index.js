@@ -1,1 +1,1 @@
-export { FacebookLocales } from './src/FacebookLocales'
+export { bestFacebookLocaleFor } from './src/FacebookLocales';
