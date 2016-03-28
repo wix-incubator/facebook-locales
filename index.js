@@ -1,5 +1,1 @@
-"use strict"
-
-import * as FacebookLocales from "./src/FacebookLocales.js"
-
-export {FacebookLocales as FacebookLocales}
+export { FacebookLocales } from './src/FacebookLocales'
