@@ -8,7 +8,7 @@ Maps locales to Facebook locales.
 Install the library with `npm install facebook-locales`
 
 ```javascript
-var FacebookLocales = require('FacebookLocales');
+var FacebookLocales = require('facebook-locales');
 
 FacebookLocales.bestFacebookLocaleFor("en_US"); //-> "en_US"
 FacebookLocales.bestFacebookLocaleFor("fr_FR"); //-> "fr_FR"
