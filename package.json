@@ -7,7 +7,7 @@
     "test": "mocha --compilers js:babel-register",
     "prepublish": "npm test && webpack",
     "build": ":",
-    "release": "wnpm-release -- --no-shrinkwrap"
+    "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/wix/facebook-locales",
   "devDependencies": {
-    "@wix/wnpm-ci": "*",
     "babel": "^6.5.2",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
