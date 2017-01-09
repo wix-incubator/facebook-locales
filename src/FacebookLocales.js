@@ -1,4 +1,4 @@
-import { supportedLocales as facebookSupportedLocales } from '../src/Facebook'
+import { supportedLocales as facebookSupportedLocales } from './Facebook'
 import _ from 'lodash'
 
 // Facebook blanket locales, mapped to real locales by common sense.
