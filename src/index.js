@@ -1,0 +1,1 @@
+export { bestFacebookLocaleFor } from './FacebookLocales';
