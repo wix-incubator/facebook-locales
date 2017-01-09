@@ -1,3 +1,3 @@
-import * as FacebookLocales from './FacebookLocales'
+import { bestFacebookLocaleFor } from './FacebookLocales'
 
-export {FacebookLocales as default}
+export { bestFacebookLocaleFor }
