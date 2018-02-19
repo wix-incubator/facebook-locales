@@ -41,7 +41,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "lodash": "^3.10.0"
+    "lodash": "^4.17.5"
   },
   "directories": {
     "test": "test"
