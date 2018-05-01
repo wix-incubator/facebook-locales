@@ -1,9 +1,4 @@
-// Auto-generated:
-// 1. Download https://www.facebook.com/translations/FacebookLocales.xml
-// 2. Paste in http://www.utilities-online.info/xmltojson/ and convert to JSON
-// 3. In browser,
-//       var facebookLocales = <JSON>
-//       facebookLocales.locales.locale.forEach((data) => { console.log('\'' + data.codes.code.standard.representation + '\', // ' + data.englishName) })
+// Based on http://fbdevwiki.com/wiki/Locales
 export const supportedLocales = [
 	'af_ZA', // Afrikaans
 	'ak_GH', // Akan
