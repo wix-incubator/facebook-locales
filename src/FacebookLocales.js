@@ -54,9 +54,8 @@ const facebookVirtualLocales = {
 
 // Invert facebookVirtualLocales (map real locales to Facebook virtual locales)
 const localesToNonStandardFacebookLocales = _(facebookVirtualLocales)
-	.map((locales, facebookNonStandardLocale) => _.map(locales, locale => [locale, facebookNonStandardLocale]))
-	.flatten()
-	.zipObject()
+	.flatMap((locales, facebookNonStandardLocale) => _.map(locales, locale => [locale, facebookNonStandardLocale]))
+	.fromPairs()
 	.value()
 
 export const bestFacebookLocaleFor = locale => {
