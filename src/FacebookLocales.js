@@ -59,6 +59,14 @@ const localesToNonStandardFacebookLocales = _(facebookVirtualLocales)
 	.value()
 
 export const bestFacebookLocaleFor = locale => {
+	// Normalize locale input format
+	if (locale.includes('-')) {
+		locale = locale.replace('-', '_');
+	}
+	if (locale.includes('_')) {
+		locale = locale.split('_')[0] + '_' + locale.split('_')[1].toUpperCase();
+	}
+
 	// Standard supported locales
 	if (_.includes(facebookSupportedLocales, locale)) {
 		return locale
