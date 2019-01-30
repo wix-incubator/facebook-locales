@@ -4,7 +4,7 @@
   "description": "Maps locales to Facebook locales",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register",
+    "test": "mocha --compilers js:babel-register && tsd-check",
     "compile": "babel -d dist/ src/",
     "prepublish": "npm test && npm run compile",
     "build": ":",
@@ -35,7 +35,8 @@
     "babel-register": "^6.8.0",
     "babel-runtime": "^6.6.1",
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "tsd-check": "^0.3.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
