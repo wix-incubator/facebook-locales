@@ -6,9 +6,10 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "compile": "babel -d dist/ src/",
-    "prepublish": "npm test && npm run compile",
+    "prepublish": "npm run snyk-protect; npm test && npm run compile",
     "build": ":",
-    "release": "npm install wnpm-ci && wnpm-release -- --no-shrinkwrap"
+    "release": "npm install wnpm-ci && wnpm-release -- --no-shrinkwrap",
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
@@ -41,9 +42,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "snyk": "^1.192.3"
   },
   "directories": {
     "test": "test"
-  }
+  },
+  "snyk": true
 }
