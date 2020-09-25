@@ -54,13 +54,13 @@ const facebookVirtualLocales = {
 
 // Invert facebookVirtualLocales (map real locales to Facebook virtual locales)
 const localesToNonStandardFacebookLocales = lodash(facebookVirtualLocales)
-	.flatMap((locales, facebookNonStandardLocale) => lodash.map(locales, locale => [locale, facebookNonStandardLocale]))
+	.flatMap((locales, facebookNonStandardLocale) => locales.map(locale => [locale, facebookNonStandardLocale]))
 	.fromPairs()
 	.value()
 
 export const bestFacebookLocaleFor = locale => {
 	// Standard supported locales
-	if (lodash.includes(facebookSupportedLocales, locale)) {
+	if (facebookSupportedLocales.includes(locale)) {
 		return locale
 	}
 
@@ -72,7 +72,7 @@ export const bestFacebookLocaleFor = locale => {
 
 	// Unsupported locale, make an effort and return some supported locale with same langauge
 	const language = locale.substring(0, 2)
-	const supportedLocaleInLanguage = lodash.find(facebookSupportedLocales, supportedLocale => lodash.startsWith(supportedLocale, language) )
+	const supportedLocaleInLanguage = facebookSupportedLocales.find(supportedLocale => supportedLocale.indexOf(language) === 0)
 	if (supportedLocaleInLanguage) {
 		return supportedLocaleInLanguage
 	}
