@@ -1,5 +1,4 @@
 import { supportedLocales as facebookSupportedLocales } from './Facebook'
-import lodash from 'lodash'
 
 // Facebook blanket locales, mapped to real locales by common sense.
 // @see <a href='https://developers.facebook.com/docs/internationalization#locales'>Locales and Languages Supported by Facebook</a>
@@ -53,10 +52,12 @@ const facebookVirtualLocales = {
 }
 
 // Invert facebookVirtualLocales (map real locales to Facebook virtual locales)
-const localesToNonStandardFacebookLocales = lodash(facebookVirtualLocales)
-	.flatMap((locales, facebookNonStandardLocale) => locales.map(locale => [locale, facebookNonStandardLocale]))
-	.fromPairs()
-	.value()
+const localesToNonStandardFacebookLocales = {};
+Object.keys(facebookVirtualLocales).forEach((locale) => {
+  facebookVirtualLocales[locale].reduce(( accumulator = localesToNonStandardFacebookLocales, currentValue, index) => {
+    accumulator[currentValue] = locale;
+  }, localesToNonStandardFacebookLocales);
+});
 
 export const bestFacebookLocaleFor = locale => {
 	// Standard supported locales
